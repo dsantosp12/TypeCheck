@@ -113,19 +113,19 @@ def f_with_multi_list(l1, l2):
 
 @type_check(first=str, last=str, age=int)
 def f_triple1(first, last, age):
-    return first + " " + last + ", age: " + age
+    return (first + " " + last + ", age: ").format(age)
 
 
 @type_check(first=str, age=int, last=str)
 def f_triple2(first, last, age):
-    return first + " " + last + ", age: " + age
+    return (first + " " + last + ", age: ").format(age)
 
 
 @type_check(last=str, first=str, age=int)
 def f_triple3(first, last, age):
-    return first + " " + last + ", age: " + age
+    return (first + " " + last + ", age: ").format(age)
 
 
 @type_check(age=str, first=str, last=int)
 def f_triple4(first, last, age):
-    return first + " " + last + ", age: " + age
+    return (first + " " + last + ", age: ").format(age)

@@ -270,3 +270,25 @@ class TestTypeCheck(unittest.TestCase):
 
         with self.assertRaises(TypeError):
             f_triple4("Daniel", "Santos", 9.8)
+
+    def test_num_of_argument_match_function(self):
+        @type_check(int)
+        def f1(n1, n2):
+            return n1 + n2
+
+        @type_check
+        def f2(n1, n2):
+            return n1 + n2
+
+        @type_check(int, int, str)
+        def f3(n1, n2):
+            return n1 + n2
+
+        with self.assertRaises(IndexError):
+            f1(2, 3)
+
+        with self.assertRaises(TypeError):
+            f2(2, 3)
+
+        with self.assertRaises(IndexError):
+            f3(2, 3)
