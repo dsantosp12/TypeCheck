@@ -8,7 +8,7 @@
 """
 
 
-from type_check.type_check import *
+from type_check import *
 
 
 class CustomObject:
