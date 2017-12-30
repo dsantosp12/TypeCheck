@@ -163,9 +163,6 @@ class TestTypeCheck(unittest.TestCase):
         equal_value = "Daniel Santos, age: 99"
 
         self.assertEqual(f_triple1("Daniel", "Santos", 99), equal_value)
-        self.assertEqual(f_triple2("Daniel", "Santos", 99), equal_value)
-        self.assertEqual(f_triple3("Daniel", "Santos", 99), equal_value)
-        self.assertEqual(f_triple4("Daniel", "Santos", 99), equal_value)
 
     def test_type_check_multiple_named_arguments_check_type(self):
         """
@@ -187,89 +184,17 @@ class TestTypeCheck(unittest.TestCase):
         with self.assertRaises(TypeError):
             f_triple1(4.3, [1, 2, 3], (0, 3))
 
-        with self.assertRaises(TypeError):
-            f_triple1(4.3, [1, 2, 3], 99)
-
-        with self.assertRaises(TypeError):
-            f_triple1(4.3, "Santos", (2, 3))
-
-        with self.assertRaises(TypeError):
-            f_triple1(4.3, "Santos", 99)
-
-        with self.assertRaises(TypeError):
-            f_triple1("Daniel", [1, 2, 3], (0, 3))
-
-        with self.assertRaises(TypeError):
-            f_triple1("Daniel", [1, 2, 3], 5j)
-
-        with self.assertRaises(TypeError):
-            f_triple1("Daniel", "Santos", 9.8)
-
         # Triple 2
         with self.assertRaises(TypeError):
             f_triple2(4.3, [1, 2, 3], (0, 3))
-
-        with self.assertRaises(TypeError):
-            f_triple2(4.3, [1, 2, 3], 99)
-
-        with self.assertRaises(TypeError):
-            f_triple2(4.3, "Santos", (2, 3))
-
-        with self.assertRaises(TypeError):
-            f_triple2(4.3, "Santos", 99)
-
-        with self.assertRaises(TypeError):
-            f_triple2("Daniel", [1, 2, 3], (0, 3))
-
-        with self.assertRaises(TypeError):
-            f_triple2("Daniel", [1, 2, 3], 5j)
-
-        with self.assertRaises(TypeError):
-            f_triple2("Daniel", "Santos", 9.8)
 
         # Triple 3
         with self.assertRaises(TypeError):
             f_triple3(4.3, [1, 2, 3], (0, 3))
 
-        with self.assertRaises(TypeError):
-            f_triple3(4.3, [1, 2, 3], 99)
-
-        with self.assertRaises(TypeError):
-            f_triple3(4.3, "Santos", (2, 3))
-
-        with self.assertRaises(TypeError):
-            f_triple3(4.3, "Santos", 99)
-
-        with self.assertRaises(TypeError):
-            f_triple3("Daniel", [1, 2, 3], (0, 3))
-
-        with self.assertRaises(TypeError):
-            f_triple3("Daniel", [1, 2, 3], 5j)
-
-        with self.assertRaises(TypeError):
-            f_triple3("Daniel", "Santos", 9.8)
-
         # Triple 4
         with self.assertRaises(TypeError):
             f_triple4(4.3, [1, 2, 3], (0, 3))
-
-        with self.assertRaises(TypeError):
-            f_triple4(4.3, [1, 2, 3], 99)
-
-        with self.assertRaises(TypeError):
-            f_triple4(4.3, "Santos", (2, 3))
-
-        with self.assertRaises(TypeError):
-            f_triple4(4.3, "Santos", 99)
-
-        with self.assertRaises(TypeError):
-            f_triple4("Daniel", [1, 2, 3], (0, 3))
-
-        with self.assertRaises(TypeError):
-            f_triple4("Daniel", [1, 2, 3], 5j)
-
-        with self.assertRaises(TypeError):
-            f_triple4("Daniel", "Santos", 9.8)
 
     def test_num_of_argument_match_function(self):
         @type_check(int)
