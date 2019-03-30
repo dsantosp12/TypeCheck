@@ -1,12 +1,13 @@
 # TypeCheck
 Type safe Python 🐍 using decorators.
 
-## Example
+## Examples
 
 ```python
 from type_check import *
 
 
+# Basic usage
 @type_check(int)
 def print_int(a)
     print(a)
