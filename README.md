@@ -7,6 +7,11 @@ Type safe Python 🐍 using decorators.
 from type_check import *
 
 
+@type_check(int)
+def print_int(a)
+    print(a)
+
+
 # It's not limited to two arguments, you can add more as needed
 @type_check(int, int)
 def add(a, b):
